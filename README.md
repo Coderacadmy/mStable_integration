@@ -1,0 +1,3 @@
+# Hardhat boilerplate
+
+"# flashup-contracts" 
