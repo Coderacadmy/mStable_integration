@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 
 import "./ILendingPoolAddressesProviderV2.sol";
-import  "./DataTypes.sol";
+import  "contracts/dataType/DataTypes.sol";
 
 interface ILendingPoolV2 {
   /**

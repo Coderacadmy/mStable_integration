@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 
-import "./IERC20.sol";
-import "./HandlerBase.sol";
+import "contracts/interfaces/IERC20.sol";
+import "contracts/handler/HandlerBase.sol";
 import "hardhat/console.sol";
 
 interface IFaucet {

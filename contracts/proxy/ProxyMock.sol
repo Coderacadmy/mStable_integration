@@ -3,10 +3,10 @@
 pragma solidity ^0.8.0;
 
 import "./Proxy.sol";
-import "./Config.sol";
-import "./GasProfiler.sol";
-import "./IHandlerEvents.sol";
-import "./LibFeeStorage.sol";
+import "contracts/config/Config.sol";
+import "contracts/gasProfiler/GasProfiler.sol";
+import "contracts/interfaces/IHandlerEvents.sol";
+import "contracts/lib/LibFeeStorage.sol";
 
 contract ProxyMock is Proxy, GasProfiler, IHandlerEvents {
     using LibStack for bytes32[];

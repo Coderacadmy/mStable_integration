@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./IFeeRuleRegistry.sol";
-import "./IRule.sol";
+import "contracts/interfaces/IFeeRuleRegistry.sol";
+import "contracts/interfaces/IRule.sol";
 
 contract FeeRuleRegistry is IFeeRuleRegistry, Ownable {
     mapping(uint256 => address) public override rules;

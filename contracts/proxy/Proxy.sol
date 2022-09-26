@@ -2,16 +2,16 @@
 
 pragma solidity ^0.8.0;
 
-import "./IERC20.sol";
+import "contracts/interfaces/IERC20.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-import "./IProxy.sol";
-import "./IRegistry.sol";
-import "./IFeeRuleRegistry.sol";
-import "./Config.sol";
-import "./Storage.sol";
-import "./LibParam.sol";
-import "./LibFeeStorage.sol";
+import "contracts/interfaces/IProxy.sol";
+import "contracts/interfaces/IRegistry.sol";
+import "contracts/interfaces/IFeeRuleRegistry.sol";
+import "contracts/config/Config.sol";
+import "contracts/Storage.sol";
+import "contracts/lib/LibParam.sol";
+import "contracts/lib/LibFeeStorage.sol";
 import "hardhat/console.sol";
 
 /**

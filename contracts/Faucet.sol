@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "./IERC20.sol";
+import "contracts/interfaces/IERC20.sol";
 
 contract Faucet {
     // using SafeERC20 for IERC20;

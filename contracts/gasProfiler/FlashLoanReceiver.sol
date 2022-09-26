@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./IFlashLoanReceiver.sol";
-import "./IERC20.sol";
+import "contracts/interfaces/IFlashLoanReceiver.sol";
+import "contracts/interfaces/IERC20.sol";
 import "hardhat/console.sol";
 
 contract FlashLoanReceiver is IFlashLoanReceiver {

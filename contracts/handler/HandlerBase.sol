@@ -2,11 +2,11 @@
 
 pragma solidity ^0.8.0;
 
-import "./IERC20.sol";
-import "./IERC20Usdt.sol";
+import "contracts/interfaces/IERC20.sol";
+import "contracts/interfaces/IERC20Usdt.sol";
 
-import "./Config.sol";
-import "./Storage.sol";
+import "contracts/config/Config.sol";
+import "contracts/Storage.sol";
 
 abstract contract HandlerBase is Storage, Config {
     // using SafeERC20 for IERC20;
