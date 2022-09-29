@@ -140,7 +140,7 @@ describe("Aave Token Borrow", function () {
 
 
    it("Should Revert:borrow token over the collateral value", async () => {
-    const borrowAmount = parseEther("10000").toHexString();
+    const borrowAmount = parseEther("10000000000").toHexString();
     const data = abi.simpleEncode("borrow(address,uint256,uint256)", borrowToken.address, borrowAmount, 2);
     await variableDebtToken.connect(user).approveDelegation(proxyMock.address, borrowAmount);
 

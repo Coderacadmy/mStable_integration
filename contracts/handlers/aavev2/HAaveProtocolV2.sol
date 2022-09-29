@@ -4,12 +4,12 @@ pragma solidity ^0.8.0;
 
 import "contracts/interfaces/IERC20.sol";
 import "contracts/interfaces/IProxy.sol";
-import "contracts/handler/HandlerBase.sol";
+import "contracts/handlers/HandlerBase.sol";
 import "contracts/interfaces/IWETH9.sol";
 import "contracts/interfaces/ILendingPoolV2.sol";
 import "contracts/interfaces/IFlashLoanReceiver.sol";
 import "contracts/interfaces/ILendingPoolAddressesProviderV2.sol";
-import "contracts/dataType/DataTypes.sol";
+import "contracts/handlers/aavev2/libraries/DataTypes.sol";
 import "hardhat/console.sol";
 
 contract HAaveProtocolV2 is HandlerBase, IFlashLoanReceiver {

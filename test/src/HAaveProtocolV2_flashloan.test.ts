@@ -12,8 +12,15 @@ const web3 = new Web3();
 const UNISWAPV2_FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
 const USDC_TOKEN = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 const WETH_TOKEN = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+const dai = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
+const usdt = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
+const usdc = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
+const hdrn = "0xF2E3A6Ba8955B345a88E5013D9a299c0E83a787e";
+const busd = "0x4Fabb145d64652a948d72533023f6E7A623C7C53";
+const rai = "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919";
+const bat = "0x7abE0cE388281d2aCF297Cb089caef3819b13448";
 
-describe.only("Aave Token Flashloan", function () {
+describe("Aave Token Flashloan", function () {
   let signer: SignerWithAddress;
   let user: SignerWithAddress;
   let user2: SignerWithAddress;
@@ -29,16 +36,7 @@ describe.only("Aave Token Flashloan", function () {
   let faucet: Contract;
   let tokenProvider: any;
 
-  const dai = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
-  const usdt = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-  const usdc = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
-  const hdrn = "0xF2E3A6Ba8955B345a88E5013D9a299c0E83a787e";
 
-  const busd = "0x4Fabb145d64652a948d72533023f6E7A623C7C53";
-  const rai = "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919";
-  const bat = "0x7abE0cE388281d2aCF297Cb089caef3819b13448";
-
-  const AAVEPROTOCOL_V2_PROVIDER = "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5";
 
   before(async () => {
     signer = await Impersonate("0x06920C9fC643De77B99cB7670A944AD31eaAA260");

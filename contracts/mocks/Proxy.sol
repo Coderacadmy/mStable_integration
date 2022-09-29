@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "contracts/interfaces/IProxy.sol";
 import "contracts/interfaces/IRegistry.sol";
 import "contracts/interfaces/IFeeRuleRegistry.sol";
-import "contracts/config/Config.sol";
+import "contracts/Config.sol";
 import "contracts/Storage.sol";
 import "contracts/lib/LibParam.sol";
 import "contracts/lib/LibFeeStorage.sol";

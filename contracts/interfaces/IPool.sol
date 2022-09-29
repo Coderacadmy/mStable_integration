@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "./IPoolAddressesProvider.sol";
-import "contracts/dataType/DataTypes.sol";
+import "contracts/handlers/aavev2/libraries/DataTypes.sol";
 
 /**
  * @title IPool
