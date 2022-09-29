@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "contracts/interfaces/IERC20.sol";
 import "contracts/interfaces/IERC20Usdt.sol";
 
-import "contracts/config/Config.sol";
+import "contracts/Config.sol";
 import "contracts/Storage.sol";
 
 abstract contract HandlerBase is Storage, Config {

@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "contracts/interfaces/IProxy.sol";
 import "contracts/interfaces/IRegistry.sol";
 import "contracts/interfaces/IFeeRuleRegistry.sol";
-import "contracts/config/Config.sol";
+import "contracts/Config.sol";
 import "contracts/Storage.sol";
 import "contracts/lib/LibParam.sol";
 import "contracts/lib/LibFeeStorage.sol";
@@ -240,10 +240,6 @@ contract Proxy is IProxy, Storage, Config {
         bytes memory data_,
         uint256 counter_
     ) internal returns (bytes memory result) {
-
-        console.log("ToAddress",to_);
-        console.logBytes(data_);
-        // console.log("Counter",counter_);
         require(_isValidHandler(to_), "Invalid handler");
         bool success;
         assembly {
@@ -265,10 +261,6 @@ contract Proxy is IProxy, Storage, Config {
             mstore(result, size)
             returndatacopy(add(result, 0x20), 0, size)
         }
-
-        console.log(success);
-        console.log("length",result.length);
-        console.logBytes(result);
 
         if (!success) {
             if (result.length < 68) revert("_exec");

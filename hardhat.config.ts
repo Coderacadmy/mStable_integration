@@ -57,7 +57,7 @@ if (process.env.PRIVATE_KEY) {
 
 const config: HardhatUserConfig = {
   namedAccounts: {
-    deployer: 0
+    deployer: 1
   },
   paths: {
     tests: "./test/src",
@@ -121,6 +121,11 @@ const config: HardhatUserConfig = {
       ...sharedNetworkConfig,
       url: `https://rinkeby.infura.io/v3/${process.env.INFURA_KEY}`,
       chainId: 4,
+    },
+    goerli: {
+      ...sharedNetworkConfig,
+      url: `https://goerli.infura.io/v3/${process.env.INFURA_KEY}`,
+      chainId: 5,
     },
     ropsten: {
       ...sharedNetworkConfig,

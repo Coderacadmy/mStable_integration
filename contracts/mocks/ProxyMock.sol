@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 import "./Proxy.sol";
-import "contracts/config/Config.sol";
-import "contracts/gasProfiler/GasProfiler.sol";
+import "contracts/Config.sol";
+import "contracts/mocks/debug/GasProfiler.sol";
 import "contracts/interfaces/IHandlerEvents.sol";
 import "contracts/lib/LibFeeStorage.sol";
 
