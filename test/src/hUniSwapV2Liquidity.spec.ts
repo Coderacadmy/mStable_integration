@@ -18,7 +18,7 @@ let UNISWAPV2_ETH_DAI: "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11";
 const USDC_TOKEN = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 const WETH_TOKEN = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
 
-describe.only("Uniswap Integration with FuruCombo", function () {
+describe("Uniswap Integration with FuruCombo", function () {
   let signer: SignerWithAddress;
   let user1: SignerWithAddress;
   // let user2: SignerWithAddress;
