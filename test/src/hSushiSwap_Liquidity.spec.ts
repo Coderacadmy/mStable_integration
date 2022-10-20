@@ -31,7 +31,7 @@ const hdrn = "0xF2E3A6Ba8955B345a88E5013D9a299c0E83a787e";
 const busd = "0x4Fabb145d64652a948d72533023f6E7A623C7C53";
 const bat = "0x7abE0cE388281d2aCF297Cb089caef3819b13448";
 
-describe.only("SushiSwap Liquidity", function () {
+describe("SushiSwap Liquidity", function () {
   let signer: SignerWithAddress;
   let user1: SignerWithAddress;
   let user2: SignerWithAddress;
