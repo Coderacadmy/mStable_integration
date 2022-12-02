@@ -240,6 +240,7 @@ contract Proxy is IProxy, Storage, Config {
         bytes memory data_,
         uint256 counter_
     ) internal returns (bytes memory result) {
+        
         require(_isValidHandler(to_), "Invalid handler");
         bool success;
         assembly {
@@ -356,8 +357,10 @@ contract Proxy is IProxy, Storage, Config {
 
   /// @notice Check if the handler is valid in registry.
   function _isValidHandler(address handler) internal view returns (bool) {
+
     return registry.isValidHandler(handler);
   }
+  
 
   /// @notice Check if the caller is valid in registry.
   function _isValidCaller(address caller) internal view returns (bool) {

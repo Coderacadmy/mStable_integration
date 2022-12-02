@@ -95,7 +95,9 @@ describe("SushiSwap Swap", function () {
   it("Registr handlers", async function () {
   
     await registry.register(hSushiSwap.address, ethers.utils.formatBytes32String("HSushiSwap"));
-    await registry.register(hMock.address, ethers.utils.formatBytes32String("HMock"));  
+    await registry.register(hMock.address, ethers.utils.formatBytes32String("HMock")); 
+    // console.log("handler address: ", await registry.callStatic.isValidHandler(hMock.address));
+
   });
 
   describe('Swapping', function() {
@@ -115,7 +117,8 @@ describe("SushiSwap Swap", function () {
       );
       await DaiToken.transfer(proxyMock.address, value);
       await proxyMock.updateTokenMock(DaiToken.address);
-      await proxyMock.execMock(to, data);   
+      await proxyMock.execMock(to, data); 
+        
     }); 
     
     it('Swap Rai token into WETH:',async () => {  

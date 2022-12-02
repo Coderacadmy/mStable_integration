@@ -18,6 +18,13 @@ contract ProxyMock is Proxy, GasProfiler, IHandlerEvents {
 
     event RecordHandlerResult(bytes value);
 
+    function getChainId() public view returns (uint256 id) {
+    // no-inline-assembly
+    assembly {
+      id := chainid()
+    }
+  }
+
     function execMock(address to, bytes memory data)
         external
         payable
